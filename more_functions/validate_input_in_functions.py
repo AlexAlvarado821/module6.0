@@ -2,7 +2,7 @@
 Author: Alex Alvarado
 Program: validate_input_in_functions
 Date: 9-29-20
-Description: prompts user for name and score, prints values to console
+Description: prompts user for name and score, prints values to console if valid.
 """
 
 
@@ -18,7 +18,7 @@ def score_input(test_name, test_score=0, invalid_message = "Invalid test score, 
         if 0 <= test_score <= 100:
             return "{}: {}".format(test_name, test_score)
         else:
-            return "Invalid test score, try again!"
+            return invalid_message
     except TypeError:
         raise TypeError
 
